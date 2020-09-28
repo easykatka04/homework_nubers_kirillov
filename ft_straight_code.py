@@ -1,21 +1,15 @@
 def ft_straight_code(a):
-    if a > 0:
-        b = ''
+    if a >= 0:
+        b = a % 2
         while a > 0:
-            c = str(a % 2)
-            b = c + b
-            a = int(a / 2)
-        while len(b) != 8:
-            b = '0' + b
-        return b
-    else:
-        a = a * -1
-        n = ''
+            a = a // 2
+            b = b * 10 + a % 2
+        print(b)
+    if a < 0:
+        a = a * - 1
+        b = a % 2
+        c = 10000000
         while a > 0:
-            c = str(a % 2)
-            b = c + b
-            a = int(a / 2)
-        while len(b) != 7:
-            b = '0' + b
-        b = '1' + b
-        return b
+            a = a // 2
+            b = b * 10 + a % 2
+        print(c + b)
